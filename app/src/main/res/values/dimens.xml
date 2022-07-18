@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="character_width">250dp</dimen>
+    <dimen name="character_height">250dp</dimen>
+    <dimen name="character_name_margin_top">30dp</dimen>
+    <dimen name="character_description_margins">35dp</dimen>
+    <dimen name="character_item_img">200dp</dimen>
+    <dimen name="character_item_name">10dp</dimen>
+    <dimen name="character_item_name_size">20sp</dimen>
+    <dimen name="character_screen_name_size">15sp</dimen>
+    <dimen name="character_screen_description_size">20sp</dimen>
+</resources>

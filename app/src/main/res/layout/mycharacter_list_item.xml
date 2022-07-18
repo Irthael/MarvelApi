@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="mycharacter"
+            type="com.dani.domain.Mycharacter" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivItem"
+            imageUrl="@{mycharacter.thumbnail}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/character_item_img"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/character_item_name"
+            android:paddingBottom="@dimen/character_item_name"
+            android:textSize="@dimen/character_item_name_size"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            text="@{mycharacter.name}" />
+
+    </LinearLayout>
+</layout>

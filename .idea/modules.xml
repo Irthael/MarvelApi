@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ApiMarvel.iml" filepath="$PROJECT_DIR$/.idea/modules/ApiMarvel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ApiMarvel.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ApiMarvel.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ApiMarvel.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ApiMarvel.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ApiMarvel.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ApiMarvel.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ApiMarvel.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ApiMarvel.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/ApiMarvel.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/ApiMarvel.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/ApiMarvel.data.main.iml" filepath="$PROJECT_DIR$/.idea/modules/data/ApiMarvel.data.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/ApiMarvel.data.test.iml" filepath="$PROJECT_DIR$/.idea/modules/data/ApiMarvel.data.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/ApiMarvel.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/ApiMarvel.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/ApiMarvel.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/ApiMarvel.domain.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/ApiMarvel.domain.test.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/ApiMarvel.domain.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usecase/ApiMarvel.usecase.iml" filepath="$PROJECT_DIR$/.idea/modules/usecase/ApiMarvel.usecase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usecase/ApiMarvel.usecase.main.iml" filepath="$PROJECT_DIR$/.idea/modules/usecase/ApiMarvel.usecase.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usecase/ApiMarvel.usecase.test.iml" filepath="$PROJECT_DIR$/.idea/modules/usecase/ApiMarvel.usecase.test.iml" />
+    </modules>
+  </component>
+</project>
