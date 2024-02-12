@@ -1,8 +1,6 @@
 package com.dani.domain
 
-import java.util.*
 import kotlin.collections.ArrayList
-
 
 data class CharacterListResponseData (
     val data: CharacterListResponse

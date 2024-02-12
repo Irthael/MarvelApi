@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.dani.apimarvel.ui.SplashFragment"
+        android:name="com.dani.marvelapi.ui.SplashFragment"
         android:label="SplashFragment" >
         <action
             android:id="@+id/action_splashFragment_to_mainFragment"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.dani.apimarvel.ui.list.MainFragment"
+        android:name="com.dani.marvelapi.ui.list.MainFragment"
         android:label="@string/characters"
         tools:layout="@layout/activity_characters_list" >
         <action
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.dani.apimarvel.ui.detail.DetailFragment"
+        android:name="com.dani.marvelapi.ui.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/activity_characters_detail_two">
         <argument

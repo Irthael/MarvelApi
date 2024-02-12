@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">Marvel</string>
     <string name="characters">Characters</string>
+
+    <array name="images">
+        <item>@drawable/ic_launcher_background</item>
+    </array>
+
+    <array name="pantome">
+        <item>#FF00FFF</item>
+    </array>
+
+    <integer-array name="numbers">
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+
+    </integer-array>
 </resources>
