@@ -12,6 +12,9 @@ interface ApiCharactersDAO {
     @Query("SELECT * FROM CharactersEntity")
     fun getAllCharacters(): List<CharactersEntity>
 
+    @Query("SELECT * FROM CharactersEntity WHERE name LIKE '%' || :name ||'%'")
+    fun getAllCharactersByName(name: String): List<CharactersEntity>
+
     @Query("SELECT * FROM CharactersEntity WHERE id = :id")
     fun getCharactersById(id: Int): CharactersEntity
 

@@ -25,7 +25,7 @@ class MainAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = itemList[position]
         holder.bind(item)
-        if (position == itemList.size-1){
+        if (position > 12 && position == itemList.size-1){
             listenerReload.invoke()
         }
         holder.itemView.setOnClickListener { listener(item) }

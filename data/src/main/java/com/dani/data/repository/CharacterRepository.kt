@@ -16,6 +16,14 @@ class CharacterRepository(private val localDataSourceCharacters: LocalDataSource
         return localDataSourceCharacters.getCharacters()
     }
 
+    suspend fun getCharactersListFilter(offset: Int, name: String): List<Mycharacter> {
+
+        val characterList = remoteDataSourceCharacters.getCharacterFilterList(offset, name)
+        localDataSourceCharacters.saveCharacters(characterList)
+
+        return localDataSourceCharacters.getCharactersByName(name)
+    }
+
     suspend fun findCharacterById(characterID: Int): Mycharacter =
         localDataSourceCharacters.findCharacterById(characterID)
 

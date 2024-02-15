@@ -37,7 +37,7 @@ class GetCharacterListUseCaseTest {
 
             whenever(characterRepository.getCharactersList(ArgumentMatchers.anyInt())).thenReturn(localMycharacter)
 
-            val result = getCharacter.invoke(0)
+            val result = getCharacter.getNormalList(0)
 
             assertEquals(localMycharacter, result)
         }

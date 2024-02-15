@@ -22,6 +22,7 @@ class MainFragment : BaseFragment() {
 
     private lateinit var binding: ActivityCharactersListBinding
     private var characterList = mutableListOf<Mycharacter>()
+    private var name: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,26 +38,29 @@ class MainFragment : BaseFragment() {
 
         component = (activity?.application as ApiApplication).charactersComponent.plus(CharactersListActivityModule())
 
-        binding.rvItems.layoutManager =
-            GridLayoutManager(context, 3, GridLayoutManager.VERTICAL, false)
+        binding.rvItems.layoutManager = GridLayoutManager(context, 3, GridLayoutManager.VERTICAL, false)
         adapter = MainAdapter(characterList, viewModel::onItemClicked, ::reloadList)
         binding.rvItems.adapter = adapter
 
-        viewModel.model.observe(viewLifecycleOwner, Observer(::updateUi))
+        binding.btnSearch.setOnClickListener {
+            name = binding.editText.text.toString()
+            viewModel.getCharacters(characterList.size, name)
+        }
 
+        viewModel.model.observe(viewLifecycleOwner, Observer(::updateUi))
     }
 
     private fun reloadList(){
-        viewModel.getCharacters(characterList.size)
+        viewModel.getCharacters(characterList.size, name)
     }
 
     override fun loadData() {
-        viewModel.getCharacters(characterList.size)
+        viewModel.getCharacters(characterList.size, name)
     }
 
     override fun onResume() {
         super.onResume()
-        viewModel.getCharacters(characterList.size)
+        viewModel.getCharacters(characterList.size, name)
     }
 
     private fun updateUi(uiModel: MainViewModel.UiModel) {

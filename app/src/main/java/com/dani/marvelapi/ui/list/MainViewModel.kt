@@ -4,7 +4,6 @@ import androidx.lifecycle.*
 import com.dani.domain.Mycharacter
 import com.dani.usecase.GetCharacterListUseCase
 import kotlinx.coroutines.launch
-import com.dani.marvelapi.ui.common.Event
 
 class MainViewModel(private val getCharacterListUseCase : GetCharacterListUseCase)
     : ViewModel() {
@@ -18,10 +17,14 @@ class MainViewModel(private val getCharacterListUseCase : GetCharacterListUseCas
     private val _model = MutableLiveData<UiModel>()
     val model: LiveData<UiModel> = _model
 
-    fun getCharacters(offset: Int){
+    fun getCharacters(offset: Int, name: String){
         viewModelScope.launch {
             _model.value = UiModel.Loading
-            _model.value = UiModel.Content( getCharacterListUseCase.invoke(offset) )
+            if (name.isBlank() || name.isEmpty()){
+                _model.value = UiModel.Content( getCharacterListUseCase.getNormalList(offset) )
+            } else {
+                _model.value = UiModel.Content( getCharacterListUseCase.getListFilter(0, name) )
+            }
         }
     }
 

@@ -18,6 +18,16 @@ interface APIService {
         @Query("offset") offset : Int
     ): Response<CharacterListResponseData>
 
+    @GET("/v1/public/characters")
+    suspend fun getAllCharactersFilter(
+        @Query("apikey") apiKey: String = BuildConfig.PUBLIC_API_KEY,
+        @Query("ts") ts: String = Constants.timeStamp,
+        @Query("limit") limit: Int = 15,
+        @Query("nameStartsWith") name : String,
+        @Query("hash") hash : String = Constants.hash(),
+        @Query("offset") offset : Int
+    ): Response<CharacterListResponseData>
+
     @GET("/v1/public/characters/{characterId}")
     suspend fun getCharactersInfo(
         @Path("characterId") characterId: Int,

@@ -19,6 +19,10 @@ class RoomDataSource(database: ApiCharactersDatabase) : LocalDataSource {
         dao.getAllCharacters().map(CharactersEntity::toCharactersDomain)
     }
 
+    override suspend fun getCharactersByName(name: String): List<CharactersDomain> = withContext(Dispatchers.IO){
+        dao.getAllCharactersByName(name).map(CharactersEntity::toCharactersDomain)
+    }
+
     override suspend fun updateCharacter(characterID: CharactersDomain) = withContext(Dispatchers.IO){
         dao.updateCharacters(characterID.toCharactersEntity())
     }
